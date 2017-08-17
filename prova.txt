@@ -1,0 +1,7 @@
+$("#f").contents().find('#custom_tooltip .object-container').html("<p>Your cart isn´t empty! Do you want to complete the current configuration? </p> <hr style='margin-top:40px;' /><div id='action'><a href='https://dev.sysgen.de/index.php?dispatch=checkout.clear'  style='' class='ty-btn ty-btn__secondary'>Clean the cart</a><a id='continue' href='#'  style='float:right;'class='ty-btn ty-btn__primary'>Complete it!</a></div>");
++				$("#f").contents().find('#custom_popup_header').html("Oops...!")
++				$("#f").contents().find('.ui-dialog-titlebar-close').remove()
++				$("#f").contents().find("#continue").click(function(){
++					location.replace("https://dev.sysgen.de/index.php?dispatch=checkout.checkout")
++				});
++				document.getElementById("f").contentWindow.createPopUp("custom_tooltip")
